@@ -1,0 +1,191 @@
+:root{
+    --timeAnimation: 2.5s;
+}
+
+ ul, button{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    align-items: flex-start;
+}
+
+ button, p{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    transition: 1s;
+}
+p{  
+    font-size: 16px; 
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    animation-duration: var(--timeAnimation);
+    animation-name: slide_P;
+}
+button:hover{
+    background-color: var(--light-green);
+}
+ img{
+    height: 32px;
+}
+
+/* Container geral */
+.container{
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    animation-duration: var(--timeAnimation);
+    animation-name: logoSlide;
+}
+
+.logo-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+.logo-button img{
+    padding-right: 20px;
+}
+.logo-button button{
+    align-items: center;
+    animation-duration: var(--timeAnimation);
+    animation-name: logoSlide;
+    padding-left: 10vh; 
+}
+
+
+.sidebar-open{
+    background-color: var(--green);
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--timeAnimation);
+    animation-duration: var(--timeAnimation);
+    animation-name: slideOn;
+}
+
+.sidebar-closed{
+    background-color: var(--green);
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.user-profile{
+    background-color: var(--light-green);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+    width: 30%;
+    padding: 12px;
+}
+.user-profile img{
+    border-radius: 12px;
+    height: 48px;
+    transition: 1s;
+    padding: 8px;
+}
+.user-profile img:hover{
+    background-color: var(--green);
+}
+
+.user-profile-open{
+    animation-name: slideOnProfile;
+    animation-duration: var(--timeAnimation);
+    background-color: var(--light-green);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+    padding: 12px;
+}
+.user-profile-open img{
+    border-radius: 12px;
+    height: 64px;
+    animation-name: logOutSlide;
+    animation-duration: var(--timeAnimation);
+}
+.user-profile-open h5{
+    margin-left: 12px;
+}
+.user-profile-open p{
+    font-size: 16px;
+    animation-name: slide_P;
+}
+.photo-name{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+
+@keyframes logOutSlide{
+    from{
+        height: 0px;
+    }
+    to{
+        height: 64px;
+    }
+}
+@keyframes logoSlide {
+    from{ 
+        padding-left: 0;
+    }
+    to{
+        padding-left: 10vh;        
+    }
+}
+
+@keyframes slideOn {
+    from {
+        margin-right: 50%;
+        width: 30%;
+    }
+    to {
+        margin-right: 100%;
+        width: 100%
+    }
+  }
+@keyframes slideOnProfile {
+    from {
+        margin-right: 50%;
+        font-size: 0px;
+        width: 30%;
+    }
+    to {
+        margin-right: 100%;
+        font-size: 18px;
+        width: 100%
+    }
+  }
+@keyframes slide_P {
+    from {
+        font-size: 0px;
+    }
+    to {
+        font-size: 16px;
+    }
+  }
+
